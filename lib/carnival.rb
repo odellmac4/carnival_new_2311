@@ -13,7 +13,7 @@ attr_reader :duration, :rides
 
     def most_popular_ride
         @rides.max_by do |ride|
-            ride.total_revenue
+            ride.rider_log.count
         end
     end
 end

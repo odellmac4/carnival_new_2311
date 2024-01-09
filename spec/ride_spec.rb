@@ -75,15 +75,14 @@ RSpec.describe Ride do
             @ride3.board_rider(@visitor3)
             
             expect(@visitor1.spending_money).to eq (8)
-            expect(@visitor2.spending_money).to eq (3)
+            expect(@visitor2.spending_money).to eq (5)
             expect(@visitor3.spending_money).to eq (13)
             expect(@ride3.rider_log).to eq ({
                 @visitor1 => 1,
-                @visitor2 => 1,
                 @visitor3 => 1
             })
 
-            expect(@ride3.total_revenue).to eq (6)
+            expect(@ride3.total_revenue).to eq (4)
 
         end
     end
